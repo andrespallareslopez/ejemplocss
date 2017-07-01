@@ -1,0 +1,212 @@
+<html>
+  <head>
+     <title>
+       Calculadora01
+     </title>
+     <style>
+        #calc01{
+        	width: 200px;
+        	height: 300px;
+        	/*
+        	border-width: 1px;
+       	    border-color: silver;
+       	    border-style:solid;
+       	    border-radius: 5px;
+       	    */
+        }
+        #entrada{
+        	width: 100%;
+        	height: 20%;
+        	/*
+            border-width: 1px;
+       	    border-color: silver;
+       	    border-style:solid;
+       	    border-radius: 5px;
+       	    */
+        }
+        #numeros{
+        	width: 100%;
+        	height: 80%;
+            border-width: 1px;
+       	    border-color: black;
+       	    border-style:solid;
+       	    border-radius: 5px;
+       	    background: linear-gradient(to bottom, #45484d 0%,#000000 100%);
+       	    margin-top:3%;
+       	    padding-top:3%;
+        }
+        #btn7,#btn8,#btn9,#btn4,#btn5,#btn6,#btn1,#btn2,#btn3,#btnpunto{
+        	float: left;
+            width: 30.0%;
+            height: 17%;
+            border-width: 1px;
+       	    border-color: silver;
+       	    border-style:solid;
+       	    border-radius: 5px;
+       	    margin: 1%; 
+       	    text-align: center;
+       	    font-size: 2.0em;
+       	    font-weight: bold;
+       	    background: linear-gradient(to bottom, #b5bdc8 0%,#828c95 36%,#28343b 100%);
+
+       	    /*
+       	    background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%);
+       	    */
+       	    color:white;
+       	    /*padding-top: 5%;*/
+        }
+        #btn0{
+        	float: left;
+            width: 63.0%;
+            height: 17%;
+            border-width: 1px;
+       	    border-color: silver;
+       	    border-style:solid;
+       	    border-radius: 5px;
+       	    margin: 1%;
+       	    text-align: center;
+       	    font-size: 2.0em; 
+       	    font-weight: bold;
+       	    background: linear-gradient(to bottom, #b5bdc8 0%,#828c95 36%,#28343b 100%);
+       	    /*
+       	    background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%);
+       	    */
+       	    color:white;
+        }
+        #btncero{
+            float: left;
+            width: 63.0%;
+            height: 17%;
+            border-width: 1px;
+       	    border-color: silver;
+       	    border-style:solid;
+       	    border-radius: 5px;
+       	    margin: 1%;
+       	    text-align: center;
+       	    font-size: 2.0em; 
+       	    font-weight: bold;
+            background: linear-gradient(to bottom, #499bea 0%,#207ce5 100%);
+       	    color:white;
+        }
+        #btnborrar{
+            float: left;
+            width: 30.0%;
+            height: 17%;
+            border-width: 1px;
+       	    border-color: silver;
+       	    border-style:solid;
+       	    border-radius: 5px;
+       	    margin: 1%; 
+       	    text-align: center;
+       	    font-size: 2.0em;
+       	    font-weight: bold;
+       	    background: url('del.png'), linear-gradient(to bottom, #ff1a00 0%,#ff1a00 100%);
+       	    background-size: 100%;
+       	    background-repeat: no-repeat;
+
+
+       	    /*
+       	    background-image: url('del.png'), linear-gradient(to bottom, #ff1a00 0%,#ff1a00 100%);
+       	    */ 
+        }
+        #cajasuperior{
+            float: left;
+            width: 85%;
+            height: 45%;
+            /*border-width: 1px;*/
+            border-top-width: 1px;
+            border-left-width: 1px;
+            border-right-width: 0px;
+            border-bottom-width: 1px;
+
+       	    border-color: silver;
+       	    border-style:solid;
+       	    border-top-left-radius: 5px;
+       	    /*border-top-right-radius: 5px;*/
+       	    background: linear-gradient(to bottom, #ffa84c 0%,#ff7b0d 100%); 
+        }
+        #imgclose{
+        	float: left;
+            width: 14.0%;
+            height: 45%;
+            /*border-width: 1px;*/
+            border-top-width: 1px;
+            border-left-width: 0px;
+            border-right-width: 1px;
+            border-bottom-width: 1px;
+
+       	    border-color: silver;
+       	    border-style:solid;
+       	    /*border-top-left-radius: 5px;*/
+       	    border-top-right-radius: 5px;
+       	    background:url('close.png'), linear-gradient(to bottom, #ffa84c 0%,#ff7b0d 100%); 
+       	    background-size: 100%;
+       	    background-repeat: no-repeat;
+        }
+        #cajatexto{
+        	float: left;
+            width: 100%;
+            height: 55%;
+            border-width: 0px;
+       	    border-color: silver;
+       	    border-style:solid;
+       	    border-bottom-right-radius: 5px;
+       	    border-bottom-left-radius: 5px;
+        }
+        #txtnumero{
+        	width: 100%;
+        	font-size: 1.2em; 
+
+        }
+     </style>
+  </head>
+  <body>
+    <div id='calc01'>
+    	<div id='entrada'>
+    		<div id='cajasuperior'></div>
+    		<div id='imgclose'></div>
+    		<div id='cajatexto'>
+    			<input type='text' name='txtnumeros' id='txtnumero' placeholder='introducir numero' />
+    		</div>
+    	</div>
+        <div id='numeros'>
+        	<div id='btncero'><span>CE</span></div>
+        	    
+        	<div id='btnborrar'></div>
+        	<div id='btn7'>
+        		<span>7<span>
+        	</div>
+        	<div id='btn8'>
+        		<span>8</span>
+        	</div>
+        	<div id='btn9'>
+        		<span>9</span>
+        	</div>
+        	<div id='btn4'>
+        		<span>4</span>
+        	</div>
+        	<div id='btn5'>
+        		<span>5</span>
+        	</div>
+        	<div id='btn6'>
+        		<span>6</span>
+        	</div>
+        	<div id='btn1'>
+        		<span>1</span>
+        	</div>
+        	<div id='btn2'>
+        		<span>2</span>
+        	</div>
+        	<div id='btn3'>
+        		<span>3</span>
+        	</div>
+        	<div id='btn0'>
+        		<span>0</span>
+        	</div>
+        	<div id='btnpunto'>
+        		<span>.</span>
+        	</div>
+        <div>
+    </div>
+  </body>
+</html>

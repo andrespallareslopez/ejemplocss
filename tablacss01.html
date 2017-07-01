@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Tabla css 01</title>
+    <style>
+      #contenedor{
+         width: 300px;
+         height: 200px;
+      }
+      #ticket{
+        width: 100%;
+        height: auto;
+      /*}
+      table#ticket{*/
+        padding: 15px;
+        border:1px solid silver;
+        border-radius:5px;
+        border-spacing: 0px; 
+        /*font-family: Helvetica,arial;*/
+        
+      }
+      #ticket tr:first-child th:first-child{
+        border-radius:10px 0px 0px 0px;
+      }
+      #ticket tr:first-child th:last-child{
+        border-radius:0px 10px 0px 0px;
+      }
+      #ticket tr:last-child td:first-child{
+        border-radius:0px 0px 0px 10px;
+      }
+      #ticket tr:last-child td:last-child{
+        border-radius:0px 0px 10px 0px;
+      }
+      
+      #ticket tr[class='dato']:nth-child(even){
+        background-color:silver;
+      }
+      
+      #cabezera th{
+        padding: 10px;
+        background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%);
+        border:1px solid silver;
+        color:white;
+      }
+      #pie td{
+        padding: 10px;
+        background: linear-gradient(to bottom, #0e0e0e 0%,#7d7e7d 100%); 
+        border:1px solid silver;
+        color:white;
+      }
+      .celda{
+        border:1px dotted black;
+        
+      }
+      /*
+      table#ticket tr[id='cabezera'] th,table#ticket tr[id='pie'] td{
+        background-color: silver;
+      }
+      */
+      .dato{
+        background-color: white;
+      }
+      .zebra{
+        background-color: silver;
+      }
+      table#ticket tr[class='dato'] td:first-child{
+        border-left: 2px solid silver;
+      }
+      table#ticket tr[class='dato'] td:last-child{
+        border-right: 2px solid silver;
+      }
+      table#ticket tr[class='dato zebra']:hover,table#ticket tr[class='dato']:hover {
+        background-color: yellow;
+      }
+      /*
+      table#ticket tr[class='dato'] td{
+         border-top: 1px solid silver;
+      }
+      */
+    </style>
+    <script src='jquery-2.1.1.js' ></script>
+   
+  </head>
+  <body>
+     <div id='contenedor'>
+         <table id='ticket'>
+             <tr id='cabezera'>
+                <th>Producto</th>
+                <th>cnt</th>
+                <th>Precio</th>
+                <th>Total</th>
+                <th>Borrar</th>
+                <th>Editar</th>
+             </tr>
+             <tr class='dato'>
+                <td>Fanta</td>
+                <td>1</td>
+                <td>2.5</td>
+                <td>2.5</td>
+                <td><button class='btnborrar'>del</button></td>
+                <td><button class='btneditar'>edit</button></td>
+             </tr>
+              <tr class='dato'>
+                <td>Fanta</td>
+                <td>1</td>
+                <td>2.5</td>
+                <td>2.5</td>
+                <td><button class='btnborrar'>del</button></td>
+                <td><button class='btnedit'>edit</button></td>
+             </tr>
+             <tr class='dato'>
+                <td>Fanta</td>
+                <td>1</td>
+                <td>2.5</td>
+                <td>2.5</td>
+                <td><button class='btnborrar'>del</button></td>
+                <td><button class='btnedit'>edit</button></td>
+             </tr>
+             <tr id='pie'>
+                <td colspan='5'>Total:</td>
+                <td><button id='btnañadir'>nuevo</button></td>
+             </tr>
+         </table>
+     </div>
+      <script src='app.js' ></script>
+  <body>
+</html>
